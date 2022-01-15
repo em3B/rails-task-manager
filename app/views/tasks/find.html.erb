@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="column">
+    <h1><%= @task.title %></h1>
+  </div>
+  <div class="column">
+    <button type="button"><%= link_to "Edit Task", edit_path %></button>
+  </div>
+</div>
+<%= @task.details %>
+<% done = @task.completed %>
+<% if done == true %>
+  <p>This task is complete</p>
+<% else %>
+  <p>This task is not complete</p>
+<% end %>
